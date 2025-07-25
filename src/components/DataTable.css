@@ -1,0 +1,430 @@
+.table-container {
+  width: 100%;
+}
+
+.table-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.table-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.table-description {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.export-buttons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.export-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 2px solid;
+  background: white;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.export-button.csv {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.export-button.csv:hover {
+  background: #10b981;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.export-button.excel {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.export-button.excel:hover {
+  background: #f59e0b;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.table-wrapper {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.data-table thead {
+  background: #f8fafc;
+}
+
+.data-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.data-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.data-table th.sortable:hover {
+  background: #e2e8f0;
+}
+
+.data-table th.sortable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.data-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+  color: #1f2937;
+  white-space: nowrap;
+}
+
+.data-table tr.even {
+  background: #fafafa;
+}
+
+.data-table tr.odd {
+  background: white;
+}
+
+.data-table tbody tr:hover {
+  background: #f0f9ff;
+}
+
+.country-cell {
+  font-weight: 500;
+  color: #2563eb;
+}
+
+.year-cell {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.value-cell {
+  font-weight: 600;
+  color: #059669;
+  font-family: 'Courier New', monospace;
+}
+
+.table-footer {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  width: 100%;
+}
+
+.table-info {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin: 0;
+}
+
+.no-table-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #6b7280;
+  gap: 16px;
+  width: 100%;
+  text-align: center;
+  padding: 32px;
+}
+
+.no-table-data h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.no-table-data p {
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 480px) {
+  .table-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .search-container {
+    max-width: none;
+    min-width: auto;
+  }
+  
+  .export-buttons {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .export-button {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  
+  .data-table {
+    min-width: 500px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  
+  .table-title {
+    font-size: 16px;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .table-description {
+    font-size: 13px;
+    padding: 0 8px;
+  }
+  
+  .no-table-data {
+    min-height: 250px;
+    padding: 16px;
+  }
+  
+  .no-table-data h3 {
+    font-size: 16px;
+  }
+  
+  .no-table-data p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .table-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  
+  .search-container {
+    max-width: none;
+  }
+  
+  .export-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .export-button {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .data-table {
+    min-width: 600px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+  
+  .table-title {
+    font-size: 18px;
+  }
+  
+  .table-description {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+  
+  .no-table-data {
+    min-height: 300px;
+    padding: 24px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .search-container {
+    max-width: 300px;
+  }
+  
+  .data-table {
+    min-width: 700px;
+  }
+  
+  .table-title {
+    font-size: 20px;
+  }
+  
+  .table-description {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .search-container {
+    max-width: 350px;
+  }
+  
+  .data-table {
+    min-width: 800px;
+  }
+  
+  .table-title {
+    font-size: 22px;
+  }
+  
+  .table-description {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .search-container {
+    max-width: 400px;
+  }
+  
+  .data-table {
+    min-width: 900px;
+  }
+  
+  .table-title {
+    font-size: 24px;
+  }
+  
+  .table-description {
+    font-size: 16px;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1921px) {
+  .data-table {
+    min-width: 1000px;
+  }
+  
+  .table-title {
+    font-size: 26px;
+  }
+  
+  .table-description {
+    font-size: 17px;
+  }
+}
+
+/* 4K and beyond */
+@media (min-width: 2560px) {
+  .data-table {
+    min-width: 1200px;
+  }
+  
+  .table-title {
+    font-size: 28px;
+  }
+  
+  .table-description {
+    font-size: 18px;
+  }
+}

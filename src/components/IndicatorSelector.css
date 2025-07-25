@@ -1,0 +1,49 @@
+.indicator-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.indicator-select {
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  color: #1f2937;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+}
+
+.indicator-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.indicator-select:hover {
+  border-color: #9ca3af;
+}
+
+.indicator-info {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.indicator-description {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .indicator-select {
+    padding: 10px 14px;
+    font-size: 16px; /* Évite le zoom sur mobile */
+  }
+}

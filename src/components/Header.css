@@ -1,0 +1,169 @@
+.header {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.15);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  color: #60a5fa;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-primary {
+  color: white;
+}
+
+.logo-secondary {
+  color: #93c5fd;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e0e7ff;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 480px) {
+  .header {
+    padding: 12px 8px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+  }
+  
+  .logo-secondary {
+    font-size: 12px;
+  }
+  
+  .header-info {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .header {
+    padding: 14px 12px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+  }
+  
+  .logo-secondary {
+    font-size: 13px;
+  }
+  
+  .header-info {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    padding: 16px 20px;
+  }
+  
+  .logo-text {
+    font-size: 22px;
+  }
+  
+  .header-info {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .header {
+    padding: 18px 24px;
+  }
+  
+  .logo-text {
+    font-size: 26px;
+  }
+  
+  .header-info {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .header {
+    padding: 20px 32px;
+  }
+  
+  .logo-text {
+    font-size: 28px;
+  }
+  
+  .logo-secondary {
+    font-size: 16px;
+  }
+  
+  .header-info {
+    font-size: 15px;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+  .logo-text {
+    font-size: 32px;
+  }
+  
+  .logo-secondary {
+    font-size: 18px;
+  }
+  
+  .header-info {
+    font-size: 16px;
+  }
+}

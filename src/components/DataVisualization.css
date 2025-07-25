@@ -1,0 +1,292 @@
+.data-visualization {
+  width: 100%;
+  min-height: 100%;
+}
+
+.chart-header {
+  margin-bottom: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.chart-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.chart-description {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.chart-container {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  min-height: 350px;
+}
+
+.chart-header-section {
+  margin-bottom: 16px;
+}
+
+.chart-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.chart-wrapper {
+  height: 300px;
+  position: relative;
+  width: 100%;
+}
+
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #6b7280;
+  gap: 16px;
+  width: 100%;
+  text-align: center;
+  padding: 32px;
+}
+
+.no-data h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.no-data p {
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 480px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .chart-container {
+    padding: 12px;
+    min-height: 280px;
+  }
+  
+  .chart-wrapper {
+    height: 220px;
+  }
+  
+  .chart-title {
+    font-size: 16px;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .chart-description {
+    font-size: 13px;
+    padding: 0 8px;
+  }
+  
+  .chart-section-title {
+    font-size: 14px;
+  }
+  
+  .no-data {
+    min-height: 250px;
+    padding: 16px;
+  }
+  
+  .no-data h3 {
+    font-size: 16px;
+  }
+  
+  .no-data p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  .chart-container {
+    padding: 14px;
+    min-height: 320px;
+  }
+  
+  .chart-wrapper {
+    height: 260px;
+  }
+  
+  .chart-title {
+    font-size: 18px;
+  }
+  
+  .chart-description {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+  
+  .chart-section-title {
+    font-size: 15px;
+  }
+  
+  .no-data {
+    min-height: 300px;
+    padding: 24px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .chart-container {
+    padding: 16px;
+    min-height: 350px;
+  }
+  
+  .chart-wrapper {
+    height: 280px;
+  }
+  
+  .chart-title {
+    font-size: 20px;
+  }
+  
+  .chart-description {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .charts-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  
+  .chart-container {
+    padding: 18px;
+    min-height: 380px;
+  }
+  
+  .chart-wrapper {
+    height: 300px;
+  }
+  
+  .chart-title {
+    font-size: 22px;
+  }
+  
+  .chart-description {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .charts-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .chart-container {
+    padding: 20px;
+    min-height: 400px;
+  }
+  
+  .chart-wrapper {
+    height: 320px;
+  }
+  
+  .chart-title {
+    font-size: 24px;
+  }
+  
+  .chart-description {
+    font-size: 16px;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1921px) {
+  .charts-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  
+  .chart-container {
+    padding: 24px;
+    min-height: 450px;
+  }
+  
+  .chart-wrapper {
+    height: 360px;
+  }
+  
+  .chart-title {
+    font-size: 26px;
+  }
+  
+  .chart-description {
+    font-size: 17px;
+  }
+}
+
+/* 4K and beyond */
+@media (min-width: 2560px) {
+  .charts-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+  }
+  
+  .chart-container {
+    padding: 32px;
+    min-height: 500px;
+  }
+  
+  .chart-wrapper {
+    height: 400px;
+  }
+  
+  .chart-title {
+    font-size: 28px;
+  }
+  
+  .chart-description {
+    font-size: 18px;
+  }
+}
